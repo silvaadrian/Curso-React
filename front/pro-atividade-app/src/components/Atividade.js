@@ -4,24 +4,22 @@ export default function Atividade(props) {
 
     function prioridadeLabel(param) {
         switch (param) {
-            case '1':
-                return 'Baixa'
-            case '2':
-                return 'Normal'
-            case '3':
-                return 'Alta'
+            case 'Baixa':
+            case 'Normal':
+            case 'Alta':
+                return param;
             default:
-                return 'Não escolhido';
+                return 'Não definido';
         }
     }
 
     function prioridadeStyle(param, icon) {
         switch (param) {
-            case '1':
+            case 'Baixa':
                 return icon ? 'smile' : 'success';
-            case '2':
+            case 'Normal':
                 return icon ? 'meh' : 'dark';
-            case '3':
+            case 'Alta':
                 return icon ? 'frown' : 'warning';
             default:
                 return 'Não definido';
@@ -52,7 +50,7 @@ export default function Atividade(props) {
                         Editar
                     </button>
                     <button className='btn btn-outline-danger btn-sm'
-                        onClick={() => props.excluir(props.ativ.id)}
+                        onClick={() => props.handleConfirmModal(props.ativ.id)}
                     >
                         <i className='fas fa-trash me-2'></i>
                         Excluir

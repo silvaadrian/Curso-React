@@ -7,7 +7,7 @@ export default function AtividadeLista(props) {
             {props.atividades.map((ativ) => (
                 <Atividade key={ativ.id}
                     ativ={ativ}
-                    excluir={props.excluir}
+                    handleConfirmModal={props.handleConfirmModal}
                     editar={props.editar}
                 />
             ))}

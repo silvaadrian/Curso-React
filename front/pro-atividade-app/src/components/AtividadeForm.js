@@ -55,7 +55,7 @@ export default function AtividadeForm(props) {
 
     return (
         <>
-            <h1 className='text-center py-3'>Atividade {atividade.id !== 0 ? atividade.id : ''}</h1>
+
             <form className='row g-3' onSubmit={handleSubmit}>
                 <div className='col-md-6'>
                     <label>Título:</label>
@@ -63,35 +63,34 @@ export default function AtividadeForm(props) {
                 </div>
                 <div className='col-md-6'>
                     <label>Status:</label>
-                    <select id='prioridade' className='form-select'
-
+                    <select id='prioridade' className='form-control'
                         name='prioridade' value={atividade.prioridade} onChange={inputTextHandler}>
-                        <option defaultValue='0' selected>Selecione</option>
-                        <option value='1'>Baixa</option>
-                        <option value='2'>Normal</option>
-                        <option value='3'>Alta</option>
+                        <option value='Não definido'>Selecione</option>
+                        <option value='Baixa'>Baixa</option>
+                        <option value='Normal'>Normal</option>
+                        <option value='Alta'>Alta</option>
                     </select>
                 </div>
-
                 <div className='col-md-12'>
                     <label>Descrição:</label>
                     <textarea id='descricao' type='text' placeholder='Descrição' className='form-control' name='descricao' value={atividade.descricao} onChange={inputTextHandler} />
                 </div>
                 <hr></hr>
-                <div className='col-md-12 mt-2 text-center'>
-                    {
-
-                        atividade.id === 0 ? (
-                            <button className='btn btn-secondary ml-2' type='submit'><i className='fas fa-plus me-2'></i> Atividade</button>
-                        ) : (
-                            <>
-                                <button className='btn btn-success me-2' type='submit'><i className='fas fa-plus me-2'></i>Salvar</button>
-                                <button className='btn btn-warning me-2' onClick={handleCancelar}><i className='fas fa-plus me-2'></i>Cancelar</button>
-                            </>
-                        )
-
-                    }
-
+                <div className='col-md-12 mt-3 text-center p-3 d-flex'>
+                    {atividade.id === 0 ? (
+                        <button className='btn btn-success p-2 me-2' type='submit'>
+                            <i className='fas fa-plus me-2'></i> Salvar
+                        </button>
+                    ) : (
+                        <>
+                            <button className='btn btn-success m-1' type='submit'>
+                                <i className='fas fa-plus me-2'></i> Salvar
+                            </button>
+                            <button className='btn btn-warning m-1' onClick={handleCancelar}>
+                                <i className='fas fa-plus me-2'></i> Cancelar
+                            </button>
+                        </>
+                    )}
                 </div>
             </form >
         </>
