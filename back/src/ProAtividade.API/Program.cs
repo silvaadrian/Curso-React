@@ -1,4 +1,4 @@
-using ProAtividade.API.Data;
+using ProAtividade.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
 
