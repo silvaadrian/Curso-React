@@ -9,7 +9,7 @@ namespace ProAtividade.Domain.Interfaces.Repositories
     public interface IAtividadeRepo : IGeralRepo
     {
         Task<Atividade[]> PegaTodasASync();
-        Task<Atividade[]> PegaPorIdASync(int id);
-        Task<Atividade[]> PegaPorTituloASync(string titulo);
+        Task<Atividade> PegaPorIdASync(int id);
+        Task<Atividade> PegaPorTituloASync(string titulo);
     }
 }

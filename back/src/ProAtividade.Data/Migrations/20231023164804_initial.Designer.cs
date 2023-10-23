@@ -11,7 +11,7 @@ using ProAtividade.Data.Context;
 namespace ProAtividade.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20230906185717_initial")]
+    [Migration("20231023164804_initial")]
     partial class initial
     {
         /// <inheritdoc />
@@ -26,7 +26,7 @@ namespace ProAtividade.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<DateTime>("DataConclusao")
+                    b.Property<DateTime?>("DataConclusao")
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("DataCriacao")

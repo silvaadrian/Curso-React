@@ -1,7 +1,6 @@
 C:\Users\adriansilva\Documents\GitHub\Curso-React\back\src\ProAtividade.Domain\bin\Debug\net6.0\ProAtividade.Domain.deps.json
 C:\Users\adriansilva\Documents\GitHub\Curso-React\back\src\ProAtividade.Domain\bin\Debug\net6.0\ProAtividade.Domain.dll
 C:\Users\adriansilva\Documents\GitHub\Curso-React\back\src\ProAtividade.Domain\bin\Debug\net6.0\ProAtividade.Domain.pdb
-C:\Users\adriansilva\Documents\GitHub\Curso-React\back\src\ProAtividade.Domain\obj\Debug\net6.0\ProAtividade.Domain.csproj.AssemblyReference.cache
 C:\Users\adriansilva\Documents\GitHub\Curso-React\back\src\ProAtividade.Domain\obj\Debug\net6.0\ProAtividade.Domain.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\adriansilva\Documents\GitHub\Curso-React\back\src\ProAtividade.Domain\obj\Debug\net6.0\ProAtividade.Domain.AssemblyInfoInputs.cache
 C:\Users\adriansilva\Documents\GitHub\Curso-React\back\src\ProAtividade.Domain\obj\Debug\net6.0\ProAtividade.Domain.AssemblyInfo.cs

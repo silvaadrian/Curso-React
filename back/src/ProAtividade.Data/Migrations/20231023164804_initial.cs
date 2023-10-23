@@ -20,7 +20,7 @@ namespace ProAtividade.Data.Migrations
                     Titulo = table.Column<string>(type: "varchar(100)", nullable: false),
                     Descricao = table.Column<string>(type: "varchar(255)", nullable: false),
                     DataCriacao = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    DataConclusao = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    DataConclusao = table.Column<DateTime>(type: "TEXT", nullable: true),
                     Prioridade = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>

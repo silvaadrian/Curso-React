@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using ProAtividade.Domain.Interfaces.Services;
 using ProAtividade.Domain.Interfaces.Repositories;
 using ProAtividade.Domain.Entities;
@@ -19,12 +15,12 @@ namespace ProAtividade.Domain.Services
 
         public async Task<Atividade> AdicionarAtividade(Atividade model)
         {
-            if (await _atividadeRepo.PegarPorTituloAsync(model.Titulo) != null)
+            if (await _atividadeRepo.PegaPorTituloASync(model.Titulo) != null)
             {
                 throw new Exception("Já existe uma atividade com esse título!");
             }
 
-            if (await _atividadeRepo.PegarPorIdAsync(model.Id) == null)
+            if (await _atividadeRepo.PegaPorIdASync(model.Id) == null)
             {
                 _atividadeRepo.Adicionar(model);
                 if (await _atividadeRepo.SalvarMudancasAsync())
@@ -43,12 +39,12 @@ namespace ProAtividade.Domain.Services
                 throw new Exception("Não se pode alterar atividade já concluída.");
             }
 
-            if (await _atividadeRepo.PegarPorTituloAsync(model.Titulo) != null)
+            if (await _atividadeRepo.PegaPorTituloASync(model.Titulo) != null)
             {
                 throw new Exception("Já existe uma atividade com esse título!");
             }
 
-            if (await _atividadeRepo.PegarPorIdAsync(model.Id) == null)
+            if (await _atividadeRepo.PegaPorIdASync(model.Id) != null)
             {
                 _atividadeRepo.Atualizar(model);
                 if (await _atividadeRepo.SalvarMudancasAsync())
@@ -72,7 +68,7 @@ namespace ProAtividade.Domain.Services
 
         public async Task<bool> DeletarAtividade(int atividadeId)
         {
-            var atividade = await _atividadeRepo.PegarPorIdAsync(atividadeId);
+            var atividade = await _atividadeRepo.PegaPorIdASync(atividadeId);
             if (atividade == null)
             {
                 throw new Exception("Atividade que tentou deletar não existe!");
@@ -86,31 +82,31 @@ namespace ProAtividade.Domain.Services
         {
             try
             {
-                var atividade = await _atividadeRepo.PegarPorIdAsync(atividadeId);
+                var atividade = await _atividadeRepo.PegaPorIdASync(atividadeId);
                 if (atividade == null)
                 {
                     return null;
                 }
                 return atividade;
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
         }
 
-        public async Task<Atividade> PegarTodasAtividadeAsync(int atividadeId)
+        public async Task<Atividade[]> PegarTodasAtividadesAsync()
         {
             try
             {
-                var atividades = await _atividadeRepo.PegarPorIdAsync(atividadeId);
+                var atividades = await _atividadeRepo.PegaTodasASync();
                 if (atividades == null)
                 {
                     return null;
                 }
                 return atividades;
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
