@@ -1,7 +1,7 @@
 
 # 📚 Curso e projeto realizado utilizando React + .NET
 
-### Esse foi um curso que realizei para aprender e me desenvolver com as tecnologias mencionadas, visando contribuir em meu projeto de TCC durante a faculdade no qual utilizmos as duas tecnologias mencionadas.
+### Esse foi um curso que realizei para aprender e me desenvolver com as tecnologias mencionadas, visando contribuir em meu projeto de TCC durante a faculdade no qual utilizamos as duas tecnologias mencionadas.
 
 
 
